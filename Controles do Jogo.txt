@@ -1,0 +1,3 @@
+Controles:
+Ativar NightVision = N
+NightVision = MouseScrollView

@@ -16,6 +16,12 @@ public class NightVisionScript : MonoBehaviour
         cam = GameObject.Find("FirstPersonCharacter").GetComponent<Camera>();
     }
 
+    private void OnEnable()
+    {
+        if(zoombar != null)
+        zoombar.fillAmount = 0.6f;
+    }
+
     // Update is called once per frame
     void Update()
     {

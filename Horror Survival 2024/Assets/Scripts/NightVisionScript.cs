@@ -11,23 +11,18 @@ public class NightVisionScript : MonoBehaviour
     public float batteryPower = 1.0f;
     public float drainTime = 2;
 
-    private LookMode lookMode;
-    private float lastDrainTime;
-
     // Start is called before the first frame update
     void Start()
     {
         zoombar = GameObject.Find("ZoomBar").GetComponent<Image>();
         batteryChunks = GameObject.Find("BatteryChunks").GetComponent<Image>();
         cam = GameObject.Find("FirstPersonCharacter").GetComponent<Camera>();
-        lookMode = FindObjectOfType<LookMode>();
-        InvokeRepeating("BatteryDrain", drainTime, drainTime);
-        lastDrainTime = Time.time;
     }
 
     private void OnEnable()
-    {   
-        if(zoombar != null)
+    {
+        InvokeRepeating("BatteryDrain", drainTime, drainTime);
+        if (zoombar != null)
             zoombar.fillAmount = 0.6f;
     }
 
@@ -57,10 +52,12 @@ public class NightVisionScript : MonoBehaviour
 
     private void BatteryDrain()
     {
-        if (lookMode != null && lookMode.IsNightVisionOn() && Time.time >= lastDrainTime + drainTime)
-        {
-            if (batteryPower > 0.0f)
-                batteryPower -= 0.25f;
-        }
+        if (batteryPower > 0.0f)
+            batteryPower -= 0.25f;
+    }
+
+    public void StopDrain()
+    {
+        CancelInvoke("BatteryDrain");
     }
 }

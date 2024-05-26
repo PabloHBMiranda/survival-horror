@@ -14,7 +14,7 @@ public class FlashLightScript : MonoBehaviour
     private float lastDrainTime;
 
     // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
         batteryChunks = GameObject.Find("FLBatteryChunks").GetComponent<Image>();
         InvokeRepeating("FLBatteryDrain", drainTime, drainTime);
@@ -30,11 +30,13 @@ public class FlashLightScript : MonoBehaviour
     {
         if (batteryPower > 0.0f)
             batteryPower -= 0.25f;
+    }
 
-        if (lookMode != null && lookMode.IsNightVisionOn() && Time.time >= lastDrainTime + drainTime)
+    public void StopDrain(bool flashLightOn)
+    {
+        if (flashLightOn)
         {
-            if (batteryPower > 0.0f)
-                batteryPower -= 0.25f;
+            CancelInvoke("FLBatteryDrain");
         }
     }
 }

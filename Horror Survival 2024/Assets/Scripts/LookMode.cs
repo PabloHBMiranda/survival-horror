@@ -9,13 +9,19 @@ public class LookMode : MonoBehaviour
     public PostProcessProfile standard;
     public PostProcessProfile nightVision;
     public GameObject nightVisionOverlay;
+    public GameObject flashLightOverlay;
+    private Light flashLight;
     private bool nightVisionOn = false;
+    private bool flashLightOn = false;
 
     // Start is called before the first frame update
     void Start()
     {
         vol = GetComponent<PostProcessVolume>();
+        flashLight = GameObject.Find("FlashLight").GetComponent<Light>();
+        flashLight.enabled = false;
         nightVisionOverlay.SetActive(false);
+        flashLightOverlay.SetActive(false);
         vol.profile = standard;
     }
 
@@ -35,8 +41,20 @@ public class LookMode : MonoBehaviour
             {
                 vol.profile = standard;
                 nightVisionOverlay.SetActive(false);
+                nightVisionOverlay.GetComponent<NightVisionScript>().StopDrain();
                 this.gameObject.GetComponent<Camera>().fieldOfView = 60;
                 nightVisionOn = false;
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if(flashLightOverlay != null)
+            {
+                flashLightOverlay.SetActive(!flashLightOn);
+                flashLight.enabled = !flashLightOn;
+                flashLightOverlay.GetComponent<FlashLightScript>().StopDrain(flashLightOn);
+                flashLightOn = !flashLightOn;
             }
         }
 
@@ -44,11 +62,6 @@ public class LookMode : MonoBehaviour
         {
             NightVisionOff();
         }
-    }
-
-    public bool IsNightVisionOn()
-    {
-        return nightVisionOn;
     }
 
     private void NightVisionOff()

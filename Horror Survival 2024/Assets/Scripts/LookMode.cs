@@ -22,20 +22,43 @@ public class LookMode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.N)  )
+        if (Input.GetKeyDown(KeyCode.N))
         {
-            nightVisionOn = !nightVisionOn;
-            if(nightVisionOn)
+            if (nightVisionOn == false)
             {
                 vol.profile = nightVision;
                 nightVisionOverlay.SetActive(true);
+                nightVisionOn = true;
+                NightVisionOff();
             }
-            else
+            else if (nightVisionOn == true)
             {
                 vol.profile = standard;
-                this.gameObject.GetComponent<Camera>().fieldOfView = 60;
                 nightVisionOverlay.SetActive(false);
+                this.gameObject.GetComponent<Camera>().fieldOfView = 60;
+                nightVisionOn = false;
             }
+        }
+
+        if (nightVisionOn == true)
+        {
+            NightVisionOff();
+        }
+    }
+
+    public bool IsNightVisionOn()
+    {
+        return nightVisionOn;
+    }
+
+    private void NightVisionOff()
+    {
+        if (nightVisionOverlay.GetComponent<NightVisionScript>().batteryPower <= 0)
+        {
+            vol.profile = standard;
+            nightVisionOverlay.SetActive(false);
+            this.gameObject.GetComponent<Camera>().fieldOfView = 60;
+            nightVisionOn = false;
         }
     }
 }

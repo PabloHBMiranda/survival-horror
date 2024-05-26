@@ -55,12 +55,21 @@ public class LookMode : MonoBehaviour
                 flashLight.enabled = !flashLightOn;
                 flashLightOverlay.GetComponent<FlashLightScript>().StopDrain(flashLightOn);
                 flashLightOn = !flashLightOn;
+                if(!flashLightOn)
+                {
+                    FlashLightSwitchOff();
+                }
             }
         }
 
         if (nightVisionOn == true)
         {
             NightVisionOff();
+        }
+
+        if (flashLightOn == true)
+        {
+            FlashLightSwitchOff();
         }
     }
 
@@ -72,6 +81,17 @@ public class LookMode : MonoBehaviour
             nightVisionOverlay.SetActive(false);
             this.gameObject.GetComponent<Camera>().fieldOfView = 60;
             nightVisionOn = false;
+        }
+    }
+
+    private void FlashLightSwitchOff()
+    {
+        if (flashLightOverlay.GetComponent<FlashLightScript>().batteryPower <= 0)
+        {
+            flashLightOverlay.SetActive(false);
+            flashLight.enabled = false;
+            flashLightOverlay.GetComponent<FlashLightScript>().StopDrain(false);
+            flashLightOn = false;
         }
     }
 }

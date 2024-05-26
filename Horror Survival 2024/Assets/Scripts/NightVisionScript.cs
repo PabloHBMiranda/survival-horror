@@ -10,6 +10,7 @@ public class NightVisionScript : MonoBehaviour
     private Camera cam;
     public float batteryPower = 1.0f;
     public float drainTime = 2;
+
     private LookMode lookMode;
     private float lastDrainTime;
 

@@ -58,7 +58,22 @@ public class WeaponManager : MonoBehaviour
         chosenWeapon = (weaponSelect)weaponID;
         anim.SetInteger("WeaponID", weaponID);
         anim.SetBool("weaponChanged", true);
+        Move();
         StartCoroutine(WeaponReset());
+    }
+
+    private void Move()
+    {
+        switch (chosenWeapon)
+        {
+            case weaponSelect.shotgun:
+                transform.localPosition = new Vector3(0.02f, -0.193f, 0.46f);
+                break;
+
+            default:
+                transform.localPosition = new Vector3(0.02f, -0.193f, 0.66f);
+                break;
+        }
     }
 
     IEnumerator WeaponReset()

@@ -8,11 +8,13 @@ public class LookMode : MonoBehaviour
     private PostProcessVolume vol;
     public PostProcessProfile standard;
     public PostProcessProfile nightVision;
+    public PostProcessProfile invetory;
     public GameObject nightVisionOverlay;
     public GameObject flashLightOverlay;
     private Light flashLight;
     private bool nightVisionOn = false;
     private bool flashLightOn = false;
+    private bool invetoryOn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +61,20 @@ public class LookMode : MonoBehaviour
                 {
                     FlashLightSwitchOff();
                 }
+            }
+        }
+
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            if(invetoryOn == false)
+            {
+                vol.profile = invetory;
+                invetoryOn = true;
+            }
+            else if(invetoryOn == true)
+            {
+                vol.profile = standard;
+                invetoryOn = false;
             }
         }
 

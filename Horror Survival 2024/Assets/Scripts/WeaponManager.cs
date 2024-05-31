@@ -9,6 +9,7 @@ public class WeaponManager : MonoBehaviour
         knife,
         cleaver,
         bat,
+        axe,
         pistol,
         shotgun
     }

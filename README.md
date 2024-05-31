@@ -4,8 +4,9 @@
 
 - **Movimento:** `WASD`
 - **Ativar/Desativar Visão Noturna:** `N`
-- **Zoom In/Out durante Visão Noturna:** Scroll do Mouse
+- **Zoom In/Out durante Visão Noturna:** `Scroll do Mouse`
 - **Ativar/Desativar Lanterna:** `F`
+- **Trocar de Arma:** `Z` *arma anterior*, `X` *arma posterior*
 
 ## Desenvolvimento
 

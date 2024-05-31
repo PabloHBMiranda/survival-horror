@@ -11,7 +11,8 @@ public class WeaponManager : MonoBehaviour
         bat,
         axe,
         pistol,
-        shotgun
+        shotgun,
+        sprayCan
     }
 
     public weaponSelect chosenWeapon;

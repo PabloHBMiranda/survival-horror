@@ -44,12 +44,6 @@ public class WeaponInventory : MonoBehaviour
         }
     }   
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ChooseWeapon(int weaponNumber)
     {
         bigIcon.sprite = bigIcons[weaponNumber];

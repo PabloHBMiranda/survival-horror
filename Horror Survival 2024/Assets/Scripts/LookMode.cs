@@ -33,6 +33,11 @@ public class LookMode : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.N))
         {
+            if(SaveScript.inventoryOpen == true)
+            {
+                return;
+            }
+
             if (nightVisionOn == false)
             {
                 vol.profile = nightVision;
@@ -52,7 +57,13 @@ public class LookMode : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if(flashLightOverlay != null)
+
+            if (SaveScript.inventoryOpen == true)
+            {
+                return;
+            }
+
+            if (flashLightOverlay != null)
             {
                 flashLightOverlay.SetActive(!flashLightOn);
                 flashLight.enabled = !flashLightOn;

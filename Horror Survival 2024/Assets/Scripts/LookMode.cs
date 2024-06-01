@@ -11,6 +11,7 @@ public class LookMode : MonoBehaviour
     public PostProcessProfile invetory;
     public GameObject nightVisionOverlay;
     public GameObject flashLightOverlay;
+    public GameObject inventoryMenu;
     private Light flashLight;
     private bool nightVisionOn = false;
     private bool flashLightOn = false;
@@ -23,6 +24,7 @@ public class LookMode : MonoBehaviour
         flashLight.enabled = false;
         nightVisionOverlay.SetActive(false);
         flashLightOverlay.SetActive(false);
+        inventoryMenu.SetActive(false);
         vol.profile = standard;
     }
 
@@ -68,8 +70,9 @@ public class LookMode : MonoBehaviour
             if(SaveScript.inventoryOpen == false)
             {
                 vol.profile = invetory;
+                inventoryMenu.SetActive(true);
 
-                if(flashLightOn == true)
+                if (flashLightOn == true)
                 {
                     flashLightOverlay.SetActive(false);
                     flashLight.enabled = false;
@@ -88,6 +91,7 @@ public class LookMode : MonoBehaviour
             else if(SaveScript.inventoryOpen == true)
             {
                 vol.profile = standard;
+                inventoryMenu.SetActive(false);
             }
         }
 

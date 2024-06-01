@@ -16,6 +16,13 @@ public class SaveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        inventoryOpen = !inventoryOpen;
+        if(FirstPersonController.inventorySwitchedOn == true)
+        {
+            inventoryOpen = true;
+        }
+        else
+        {
+            inventoryOpen = false;
+        }
     }
 }

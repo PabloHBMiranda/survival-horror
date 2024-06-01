@@ -14,8 +14,8 @@ public class SaveScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        itemsPickedUp[0]= true;
-        itemsPickedUp[1] = true;
+        weaponsPickedUp[0]= true;
+        weaponsPickedUp[1] = true;
 
         itemsPickedUp[0] = true;
         itemsPickedUp[1] = true;

@@ -14,7 +14,6 @@ public class LookMode : MonoBehaviour
     private Light flashLight;
     private bool nightVisionOn = false;
     private bool flashLightOn = false;
-    private bool invetoryOn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -66,15 +65,29 @@ public class LookMode : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.I))
         {
-            if(invetoryOn == false)
+            if(SaveScript.inventoryOpen == false)
             {
                 vol.profile = invetory;
-                invetoryOn = true;
+
+                if(flashLightOn == true)
+                {
+                    flashLightOverlay.SetActive(false);
+                    flashLight.enabled = false;
+                    flashLightOverlay.GetComponent<FlashLightScript>().StopDrain(false);
+                    flashLightOn = false;
+                }
+
+                if(nightVisionOn == true)
+                {
+                    nightVisionOverlay.SetActive(false);
+                    nightVisionOverlay.GetComponent<NightVisionScript>().StopDrain();
+                    this.gameObject.GetComponent<Camera>().fieldOfView = 60;
+                    nightVisionOn = false;
+                }
             }
-            else if(invetoryOn == true)
+            else if(SaveScript.inventoryOpen == true)
             {
                 vol.profile = standard;
-                invetoryOn = false;
             }
         }
 

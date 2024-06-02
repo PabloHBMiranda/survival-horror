@@ -13,7 +13,8 @@ public class WeaponManager : MonoBehaviour
         pistol,
         shotgun,
         sprayCan,
-        bottle
+        bottle,
+        bottleWithCloth
     }
 
     public weaponSelect chosenWeapon;

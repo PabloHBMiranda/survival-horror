@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3137411706661272916}
   - component: {fileID: 3137411706661272918}
   - component: {fileID: 3137411706661272917}
-  m_Layer: 0
+  - component: {fileID: 5513437012857903512}
+  m_Layer: 8
   m_Name: Botle_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 00585d16ce5f1114f99f30fe5f566c3e, type: 2}
+  - {fileID: 2100000, guid: cacff265539cd1c4b8bf3d3af4b241fd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,6 +84,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &5513437012857903512
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3137411706661272915}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f546f9319376daa4e848bf1f1bb39dee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3137411707669543390
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,7 +115,8 @@ GameObject:
   - component: {fileID: 3137411707669543391}
   - component: {fileID: 3137411707669543361}
   - component: {fileID: 3137411707669543360}
-  m_Layer: 0
+  - component: {fileID: 5897972003652781694}
+  m_Layer: 8
   m_Name: Botle_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +166,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 00585d16ce5f1114f99f30fe5f566c3e, type: 2}
+  - {fileID: 2100000, guid: cacff265539cd1c4b8bf3d3af4b241fd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -166,6 +188,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &5897972003652781694
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3137411707669543390}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f546f9319376daa4e848bf1f1bb39dee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3137411707935609167
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +219,8 @@ GameObject:
   - component: {fileID: 3137411707935609008}
   - component: {fileID: 3137411707935609010}
   - component: {fileID: 3137411707935609009}
-  m_Layer: 0
+  - component: {fileID: 537825828507459177}
+  m_Layer: 8
   m_Name: Botle_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +270,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 00585d16ce5f1114f99f30fe5f566c3e, type: 2}
+  - {fileID: 2100000, guid: cacff265539cd1c4b8bf3d3af4b241fd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -249,6 +292,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &537825828507459177
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3137411707935609167}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f546f9319376daa4e848bf1f1bb39dee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3561355775219475786
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,9 +321,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4190505556526399472}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BottlePickup
-  m_TagString: Untagged
+  m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -272,9 +335,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3561355775219475786}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 454.52377, y: 27.145, z: 157.76926}
-  m_LocalScale: {x: 0.007, y: 0.007, z: 0.007}
+  m_LocalScale: {x: 0.0108175175, y: 0.0108175175, z: 0.0108175175}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5944433260508322397}
@@ -291,7 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5944433260508322397}
   - component: {fileID: 3137411707765444298}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Botle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

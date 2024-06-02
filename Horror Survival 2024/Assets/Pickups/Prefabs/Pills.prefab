@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6370301001322258881}
   - component: {fileID: 4572225136268854994}
   - component: {fileID: 94474240651011909}
-  m_Layer: 0
+  - component: {fileID: 3057830934689043449}
+  m_Layer: 8
   m_Name: Pills
-  m_TagString: Untagged
+  m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9085044375496287916}
-  m_LocalRotation: {x: -0.39278275, y: 0.5879812, z: 0.587981, w: 0.3927827}
+  m_LocalRotation: {x: -0.39278093, y: 0.58798224, z: 0.58798224, w: 0.39278093}
   m_LocalPosition: {x: 459.36154, y: 27.4262, z: 158.502}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5.2263374, y: 5.2263374, z: 5.2263374}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,3 +84,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &3057830934689043449
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9085044375496287916}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f546f9319376daa4e848bf1f1bb39dee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2275043938118331105}
   - component: {fileID: 4984350759396950550}
   - component: {fileID: 390131650876648275}
-  m_Layer: 0
+  - component: {fileID: 7844250525538846480}
+  m_Layer: 8
   m_Name: Can
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,6 +84,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &7844250525538846480
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316131230869118397}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f546f9319376daa4e848bf1f1bb39dee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4657302879449093507
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,9 +113,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5470115323041009465}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SprayPaintPickup
-  m_TagString: Untagged
+  m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +127,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4657302879449093507}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.000000012772, y: 0, z: 5.4853}
   m_LocalScale: {x: 1.6285655, y: 1.6285655, z: 1.6285655}
   m_ConstrainProportionsScale: 0

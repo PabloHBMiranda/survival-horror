@@ -17,6 +17,10 @@ public class WeaponInventory : MonoBehaviour
     public AudioClip click, select;
     private int chosenWeaponNumber;
 
+    public GameObject useButton, combineButton;
+    public GameObject combinePanel, combineUseButton;
+    public Image[] combineItems;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +29,9 @@ public class WeaponInventory : MonoBehaviour
         bigIcon.sprite = bigIcons[0];
         title.text = titles[0];
         description.text = descriptions[0];
+
+        combinePanel.SetActive(false);
+        combineButton.SetActive(false);
     }
 
     private void OnEnable()
@@ -42,6 +49,30 @@ public class WeaponInventory : MonoBehaviour
                 weaponButtons[i].image.raycastTarget = true;
             }
         }
+
+        if(chosenWeaponNumber < 6)
+        {
+            combinePanel.SetActive(false);
+            combineButton.SetActive(false);
+        }
+
+        if (SaveScript.itemsPickedUp[2] == true)
+        {
+            combineItems[0].color = new Color(1, 1, 1, 1);
+        }
+        if (SaveScript.itemsPickedUp[2] == false)
+        {
+            combineItems[0].color = new Color(1, 1, 1, 0.06f);
+        }
+
+        if (SaveScript.itemsPickedUp[3] == true)
+        {
+            combineItems[1].color = new Color(1, 1, 1, 1);
+        }
+        if (SaveScript.itemsPickedUp[3] == false)
+        {
+            combineItems[1].color = new Color(1, 1, 1, 0.06f);
+        }
     }   
 
     public void ChooseWeapon(int weaponNumber)
@@ -52,6 +83,51 @@ public class WeaponInventory : MonoBehaviour
         audioPlayer.clip = click;
         audioPlayer.Play();
         chosenWeaponNumber = weaponNumber;
+
+        if(chosenWeaponNumber > 5)
+        {
+            combineButton.SetActive(true);
+            combinePanel.SetActive(false);
+        }
+
+        if (chosenWeaponNumber < 6)
+        {
+            combinePanel.SetActive(false);
+            combineButton.SetActive(false);
+        }
+    }
+
+    public void CombineAction()
+    {
+        combinePanel.SetActive(true);
+
+        if (chosenWeaponNumber == 6)
+        {
+            combineItems[1].transform.gameObject.SetActive(false);
+            if (SaveScript.itemsPickedUp[2] == true)
+            {
+                combineUseButton.SetActive(true);
+            }
+
+            if (SaveScript.itemsPickedUp[2] == false)
+            {
+                combineUseButton.SetActive(false);
+            }
+        }
+
+        if(chosenWeaponNumber == 7)
+        {
+            combineItems[1].transform.gameObject.SetActive(true);
+            if (SaveScript.itemsPickedUp[2] == true && SaveScript.itemsPickedUp[3] == true)
+            {
+                combineUseButton.SetActive(true);
+            }
+
+            if (SaveScript.itemsPickedUp[2] == false || SaveScript.itemsPickedUp[3] == false)
+            {
+                combineUseButton.SetActive(false);
+            }
+        }
     }
 
     public void AssignWeapon()

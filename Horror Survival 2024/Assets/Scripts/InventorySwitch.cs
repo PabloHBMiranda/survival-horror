@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InventorySwitch : MonoBehaviour
 {
-    public GameObject weaponPanel, itemsPanel;
+    public GameObject weaponPanel, itemsPanel, combinePanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +16,13 @@ public class InventorySwitch : MonoBehaviour
     {
         weaponPanel.SetActive(!weaponPanel.activeSelf);
         itemsPanel.SetActive(!itemsPanel.activeSelf);
+        combinePanel.SetActive(false);
     }
 
     public void SwitchWeaponsOn()
     {
         weaponPanel.SetActive(!weaponPanel.activeSelf);
         itemsPanel.SetActive(!itemsPanel.activeSelf);
+        combinePanel.SetActive(false);
     }
 }

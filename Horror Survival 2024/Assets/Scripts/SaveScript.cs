@@ -16,9 +16,14 @@ public class SaveScript : MonoBehaviour
     {
         weaponsPickedUp[0]= true;
         weaponsPickedUp[1] = true;
+        weaponsPickedUp[6] = true;
+        weaponsPickedUp[7] = true;
 
         itemsPickedUp[0] = true;
         itemsPickedUp[1] = true;
+        itemsPickedUp[2] = true;
+        itemsPickedUp[3] = true;
+        itemsPickedUp[9] = true;
     }
 
     // Update is called once per frame

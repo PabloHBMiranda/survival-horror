@@ -10,6 +10,7 @@ public class SaveScript : MonoBehaviour
     public static bool[] weaponsPickedUp = new bool[8];
     public static int itemID = 0;
     public static bool[] itemsPickedUp = new bool[13];
+    public static int[] weaponAmts = new int[8];
 
     // Start is called before the first frame update
     void Start()

@@ -1,17 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PickupsScript : MonoBehaviour
 {
     private RaycastHit hit;
     public LayerMask excludeLayers;
+    public GameObject pickupPanel;
+
+    public Image mainImage;
+    public Sprite[] weaponIcons;
+    public Text mainTitle;
+    public string[] weaponTitles;
 
     private int objID = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        pickupPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -21,8 +28,14 @@ public class PickupsScript : MonoBehaviour
         {
             if(hit.transform.gameObject.CompareTag("weapon"))
             {
+                pickupPanel.SetActive(true);
                 objID = (int)hit.transform.gameObject.GetComponent<WeaponType>().chosenWeapon;
-                Debug.Log("Pickup: " + objID);
+                mainImage.sprite = weaponIcons[objID];
+                mainTitle.text = weaponTitles[objID];
+            }
+            else
+            {
+                pickupPanel.SetActive(false);
             }
         }
     }

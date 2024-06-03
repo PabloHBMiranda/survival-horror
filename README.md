@@ -6,9 +6,10 @@
 - **Ativar/Desativar Visão Noturna:** `N`
 - **Zoom In/Out durante Visão Noturna:** `Scroll do Mouse`
 - **Ativar/Desativar Lanterna:** `F`
-[- **Trocar de Arma:** `Z` *arma anterior*, `X` *arma posterior*]
-- **Abrir/Fechar Invetário:** `I`
+EM OBSERVAÇÃO: **Trocar de Arma:** `Z` *arma anterior*, `X` *arma posterior*
+- **Abrir/Fechar Invetário:** `I
 - **Atacar:** `Botão Esquerdo do Mouse`
+- **Pegar Itens:** `E`
 
 ## Desenvolvimento
 

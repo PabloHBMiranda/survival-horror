@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 30006608254135767}
+  - component: {fileID: 1898714559050986608}
   m_Layer: 8
   m_Name: HRR_Axe_Pickup
   m_TagString: weapon
@@ -25,13 +26,26 @@ Transform:
   m_GameObject: {fileID: 35440237711295559}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.00037662, y: 0.0066436, z: 1.7149}
-  m_LocalScale: {x: 0.015224276, y: 0.015224276, z: 0.015224276}
+  m_LocalScale: {x: 0.024911482, y: 0.024911482, z: 0.024911482}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 32935027674367981}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1898714559050986608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35440237711295559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333bac8b4bb0638449e860e81cdf4664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chosenWeapon: 3
 --- !u!1 &35870752370834049
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,6 +58,7 @@ GameObject:
   - component: {fileID: 3824278116688511}
   - component: {fileID: 13330647748437701}
   - component: {fileID: 6332932846096717990}
+  - component: {fileID: 1305316745}
   m_Layer: 8
   m_Name: Object1538
   m_TagString: Untagged
@@ -136,3 +151,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1305316745
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35870752370834049}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 63.1174, y: 22.294601, z: 5.7140007}
+  m_Center: {x: -0.022899628, y: -0.4039998, z: -0.115146875}

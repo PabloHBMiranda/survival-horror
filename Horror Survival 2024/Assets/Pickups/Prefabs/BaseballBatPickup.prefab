@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3281405238547086020}
   - component: {fileID: 751278583579971086}
   - component: {fileID: 620031796}
+  - component: {fileID: 198849407}
+  - component: {fileID: 5263971260719056011}
   m_Layer: 8
   m_Name: BaseballBatPickup
   m_TagString: weapon
@@ -104,3 +106,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &198849407
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255923290494152667}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.08244351
+  m_Height: 1.0859747
+  m_Direction: 1
+  m_Center: {x: -0.0021472052, y: 0.0055018067, z: -0.00211047}
+--- !u!114 &5263971260719056011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255923290494152667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333bac8b4bb0638449e860e81cdf4664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chosenWeapon: 2

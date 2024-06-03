@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 436170460688245250}
   - component: {fileID: 2076945862084791618}
   - component: {fileID: 1041387885585293907}
+  - component: {fileID: 916255057141285239}
   m_Layer: 8
   m_Name: ShotgunAmmo
   m_TagString: ammo
@@ -104,3 +105,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &916255057141285239
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7374880525707791235}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.2859993, y: 4.485302, z: 3.9405003}
+  m_Center: {x: -50.1603, y: 38.013847, z: 18.823051}

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 122681312}
   - component: {fileID: 122681311}
   - component: {fileID: 7882084851699997934}
-  - component: {fileID: 7726406575279478405}
   m_Layer: 8
   m_Name: CabinKey_LOD0
   m_TagString: Untagged
@@ -105,19 +104,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &7726406575279478405
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 122681310}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.040869586, y: 0.45230663, z: 0.984294}
-  m_Center: {x: -0.00021769578, y: 0.00000005220598, z: 0.39030984}
 --- !u!1 &1083773076
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 51798907693336540}
   - component: {fileID: 421039514}
+  - component: {fileID: 7150460101475321690}
   m_Layer: 8
   m_Name: CabinKey
   m_TagString: item
@@ -388,3 +375,16 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1691551301}
   m_Enabled: 1
+--- !u!114 &7150460101475321690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320426473054169064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 851f1c187648d584ab22aef7c4c6d29c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chooseItem: 11

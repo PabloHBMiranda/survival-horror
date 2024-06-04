@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 555437827504248459}
   - component: {fileID: 8176264082142999742}
   - component: {fileID: 3126458855433882550}
+  - component: {fileID: 2316092312786859240}
   m_Layer: 8
   m_Name: FIRST_AID_KIT
   m_TagString: item
@@ -118,3 +119,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.025077185, y: 0.034783438, z: 0.023389718}
   m_Center: {x: 0, y: 0, z: -0.0000009536743}
+--- !u!114 &2316092312786859240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068757184515880798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 851f1c187648d584ab22aef7c4c6d29c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chooseItem: 4

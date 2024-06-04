@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5498943845187926900}
   - component: {fileID: 3671194444943988638}
+  - component: {fileID: 6428378938057633064}
   m_Layer: 8
   m_Name: Cloths
   m_TagString: item
@@ -62,6 +63,19 @@ LODGroup:
     renderers:
     - renderer: {fileID: 8562094536550703613}
   m_Enabled: 1
+--- !u!114 &6428378938057633064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5123967067960074702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 851f1c187648d584ab22aef7c4c6d29c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chooseItem: 3
 --- !u!1 &8562094534574486981
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +88,6 @@ GameObject:
   - component: {fileID: 8562094534574486979}
   - component: {fileID: 8562094534574486978}
   - component: {fileID: 603487407}
-  - component: {fileID: 4432528294931371959}
   m_Layer: 8
   m_Name: Cloths_LOD0
   m_TagString: Untagged
@@ -167,19 +180,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &4432528294931371959
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8562094534574486981}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.9891863, y: 0.5775471, z: 2.3502662}
-  m_Center: {x: 0, y: 0.00000050663954, z: 0}
 --- !u!1 &8562094536386021346
 GameObject:
   m_ObjectHideFlags: 0

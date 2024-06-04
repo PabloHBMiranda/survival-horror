@@ -13,10 +13,12 @@ public class PickupsScript : MonoBehaviour
     public Image mainImage;
     public Sprite[] weaponIcons;
     public Sprite[] itemIcons;
+    public Sprite[] ammoIcons;
 
     public Text mainTitle;
     public string[] weaponTitles;
     public string[] itemTitles;
+    public string[] ammoTitles;
 
     private int objID = 0;
     private AudioSource audioPlayer;
@@ -59,6 +61,19 @@ public class PickupsScript : MonoBehaviour
                     {
                         SaveScript.itemsPickedUp[objID] = true;
                         SaveScript.itemAmts[objID]++;
+                        audioPlayer.Play();
+                        Destroy(hit.transform.gameObject, 0.2f);
+                    }
+                }else if (hit.transform.gameObject.CompareTag("ammo")){
+                    pickupPanel.SetActive(true);
+                    objID = (int)hit.transform.gameObject.GetComponent<AmmoType>().chooseAmmo;
+                    mainImage.sprite = ammoIcons[objID];
+                    mainTitle.text = ammoTitles[objID];
+
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        SaveScript.itemsPickedUp[objID] = true;
+                        SaveScript.ammoAmts[objID]++;
                         audioPlayer.Play();
                         Destroy(hit.transform.gameObject, 0.2f);
                     }

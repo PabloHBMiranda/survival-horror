@@ -322,6 +322,8 @@ GameObject:
   m_Component:
   - component: {fileID: 353400591241037222}
   - component: {fileID: 5258963300628722356}
+  - component: {fileID: 2060231001}
+  - component: {fileID: 732993020968005737}
   m_Layer: 8
   m_Name: PistolAmmo
   m_TagString: ammo
@@ -366,6 +368,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &2060231001
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129373658052402972}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1, z: 1}
+  m_Center: {x: 0.43, y: 0.27, z: 0}
+--- !u!114 &732993020968005737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129373658052402972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a43bbe35ab47cb442905d9e9c075ed03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chooseAmmo: 0
 --- !u!1 &4823470448194755332
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +406,6 @@ GameObject:
   - component: {fileID: 667711696254062186}
   - component: {fileID: 3527665810229581826}
   - component: {fileID: 2982798443441283379}
-  - component: {fileID: 2519015520384509022}
   m_Layer: 8
   m_Name: Box_0
   m_TagString: Untagged
@@ -472,19 +499,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &2519015520384509022
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4823470448194755332}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.017631728, y: 0.009876898, z: 0.006149024}
-  m_Center: {x: 0.0016397979, y: 0, z: 0.0011984226}
 --- !u!1 &8262172791608387591
 GameObject:
   m_ObjectHideFlags: 0

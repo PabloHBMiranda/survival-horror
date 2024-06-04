@@ -12,6 +12,7 @@ public class WeaponInventory : MonoBehaviour
     public string[] descriptions;
     public Text description;
     public Button[] weaponButtons;
+    public Text amtsText;
 
     private AudioSource audioPlayer;
     public AudioClip click, select;
@@ -83,8 +84,9 @@ public class WeaponInventory : MonoBehaviour
         audioPlayer.clip = click;
         audioPlayer.Play();
         chosenWeaponNumber = weaponNumber;
+        amtsText.text = "Amt: " + SaveScript.weaponAmts[weaponNumber].ToString();
 
-        if(chosenWeaponNumber > 5)
+        if (chosenWeaponNumber > 5)
         {
             combineButton.SetActive(true);
             combinePanel.SetActive(false);

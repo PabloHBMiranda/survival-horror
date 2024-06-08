@@ -22,12 +22,16 @@ public class PickupsScript : MonoBehaviour
 
     private int objID = 0;
     private AudioSource audioPlayer;
+    public GameObject doorMessageObj;
+    public Text doorMessage;
+    public AudioClip[] pickupSounds;
 
     // Start is called before the first frame update
     void Start()
     {
         pickupPanel.SetActive(false);
         audioPlayer = GetComponent<AudioSource>();
+        doorMessageObj.SetActive(false);
     }
 
     // Update is called once per frame
@@ -40,7 +44,7 @@ public class PickupsScript : MonoBehaviour
                 if (hit.transform.gameObject.CompareTag("weapon"))
                 {
                     pickupPanel.SetActive(true);
-                    objID = (int)hit.transform.gameObject.GetComponent<WeaponType>().chosenWeapon;
+                    objID = (int)hit.transform.gameObject.GetComponent<WeaponType>().chooseWeapon;
                     mainImage.sprite = weaponIcons[objID];
                     mainTitle.text = weaponTitles[objID];
 
@@ -64,7 +68,7 @@ public class PickupsScript : MonoBehaviour
                         audioPlayer.Play();
                         Destroy(hit.transform.gameObject, 0.2f);
                     }
-                }else if (hit.transform.gameObject.CompareTag("ammo")){
+                } else if (hit.transform.gameObject.CompareTag("ammo")){
                     pickupPanel.SetActive(true);
                     objID = (int)hit.transform.gameObject.GetComponent<AmmoType>().chooseAmmo;
                     mainImage.sprite = ammoIcons[objID];
@@ -77,11 +81,33 @@ public class PickupsScript : MonoBehaviour
                         audioPlayer.Play();
                         Destroy(hit.transform.gameObject, 0.2f);
                     }
+                } else if (hit.transform.gameObject.CompareTag("door"))
+                {
+                    objID = (int)hit.transform.gameObject.GetComponent<DoorType>().chooseDoor;
+                    doorMessageObj.SetActive(true);
+                    doorMessage.text = hit.transform.gameObject.GetComponent<DoorType>().message;
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        if(hit.transform.gameObject.GetComponent<DoorType>().opened == false)
+                        {
+                            hit.transform.gameObject.GetComponent<DoorType>().message = "Pressione E para fechar a porta";
+                            hit.transform.gameObject.GetComponent<DoorType>().opened = true;
+                            hit.transform.gameObject.GetComponent<Animator>().SetTrigger("Open");
+                        }
+                        else if(hit.transform.gameObject.GetComponent<DoorType>().opened == true)
+                        {
+                            hit.transform.gameObject.GetComponent<DoorType>().message = "Pressione E para abrir a porta";
+                            hit.transform.gameObject.GetComponent<DoorType>().opened = false;
+                            hit.transform.gameObject.GetComponent<Animator>().SetTrigger("Close");
+                        }
+                        audioPlayer.Play();
+                    }
                 }
             }
             else
             {
                 pickupPanel.SetActive(false);
+                doorMessageObj.SetActive(false);
             }
         }
     }

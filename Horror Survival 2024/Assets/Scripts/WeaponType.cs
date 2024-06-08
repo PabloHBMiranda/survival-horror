@@ -16,5 +16,5 @@ public class WeaponType : MonoBehaviour
         bottle
     }
 
-    public typeOfWeapon chosenWeapon;   
+    public typeOfWeapon chooseWeapon;   
 }

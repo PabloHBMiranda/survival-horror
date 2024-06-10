@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -37,7 +38,7 @@ public class PickupsScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Physics.SphereCast(transform.position, 0.5f, transform.forward, out hit, 30, ~excludeLayers))
+        if(Physics.SphereCast(transform.position, 0.3f, transform.forward, out hit, 30, ~excludeLayers))
         {
             if(Vector3.Distance(transform.position, hit.transform.position) < pickupDisplayDistance)
             {
@@ -84,9 +85,13 @@ public class PickupsScript : MonoBehaviour
                 } else if (hit.transform.gameObject.CompareTag("door"))
                 {
                     objID = (int)hit.transform.gameObject.GetComponent<DoorType>().chooseDoor;
+                    if(hit.transform.gameObject.GetComponent<DoorType>().locked == true)
+                    {
+                        hit.transform.gameObject.GetComponent<DoorType>().message = "Porta trancada. Você precisa usar a chave " + hit.transform.gameObject.GetComponent<DoorType>().chooseDoor  + " para abrir a porta";
+                    }
                     doorMessageObj.SetActive(true);
                     doorMessage.text = hit.transform.gameObject.GetComponent<DoorType>().message;
-                    if (Input.GetKeyDown(KeyCode.E))
+                    if (Input.GetKeyDown(KeyCode.E) && hit.transform.gameObject.GetComponent<DoorType>().locked == false)
                     {
                         if(hit.transform.gameObject.GetComponent<DoorType>().opened == false)
                         {

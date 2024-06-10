@@ -235,7 +235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947039138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -499, y: 1680, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 6125261094304169347}
   - component: {fileID: 545036092}
   - component: {fileID: 8092179906252432665}
+  - component: {fileID: 400623655}
   m_Layer: 8
   m_Name: HouseKey
   m_TagString: item
@@ -388,3 +389,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chooseItem: 10
+--- !u!65 &400623655
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222729785526150963}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1000, y: 100, z: 1000}
+  m_Center: {x: 0, y: 0, z: 0}

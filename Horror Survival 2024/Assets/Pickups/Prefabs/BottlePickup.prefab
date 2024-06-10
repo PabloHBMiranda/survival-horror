@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3137411706661272918}
   - component: {fileID: 3137411706661272917}
   - component: {fileID: 5513437012857903512}
-  - component: {fileID: 340304561}
   m_Layer: 8
   m_Name: Botle_LOD2
   m_TagString: Untagged
@@ -105,20 +104,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!136 &340304561
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3137411706661272915}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 7.523165
-  m_Height: 45.58502
-  m_Direction: 1
-  m_Center: {x: -0.00000166893, y: 22.004915, z: 0.000054836273}
 --- !u!1 &3137411707669543390
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +220,6 @@ GameObject:
   - component: {fileID: 3137411707935609010}
   - component: {fileID: 3137411707935609009}
   - component: {fileID: 537825828507459177}
-  - component: {fileID: 369956427}
   m_Layer: 8
   m_Name: Botle_LOD1
   m_TagString: Untagged
@@ -328,20 +312,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!136 &369956427
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3137411707935609167}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 7.54842
-  m_Height: 45.578323
-  m_Direction: 1
-  m_Center: {x: 0, y: 22.008263, z: 0.00005722046}
 --- !u!1 &3561355775219475786
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,6 +322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4190505556526399472}
   - component: {fileID: 1380060053772787046}
+  - component: {fileID: 2089982355}
   m_Layer: 8
   m_Name: BottlePickup
   m_TagString: weapon
@@ -387,7 +358,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333bac8b4bb0638449e860e81cdf4664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chosenWeapon: 7
+  chooseWeapon: 7
+--- !u!136 &2089982355
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3561355775219475786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 8.73
+  m_Height: 49.9
+  m_Direction: 1
+  m_Center: {x: 0, y: 20.4, z: 0}
 --- !u!1 &7294915466182362417
 GameObject:
   m_ObjectHideFlags: 0

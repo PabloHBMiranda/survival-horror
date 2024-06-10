@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 51798907693336540}
   - component: {fileID: 421039514}
   - component: {fileID: 7150460101475321690}
+  - component: {fileID: 5695059126314017966}
   m_Layer: 8
   m_Name: CabinKey
   m_TagString: item
@@ -388,3 +389,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chooseItem: 11
+--- !u!136 &5695059126314017966
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320426473054169064}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

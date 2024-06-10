@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30006608254135767}
   - component: {fileID: 1898714559050986608}
+  - component: {fileID: 1579158697}
   m_Layer: 8
   m_Name: HRR_Axe_Pickup
   m_TagString: weapon
@@ -45,7 +46,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333bac8b4bb0638449e860e81cdf4664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chosenWeapon: 3
+  chooseWeapon: 3
+--- !u!65 &1579158697
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35440237711295559}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.47, y: 23.6, z: 63.3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &35870752370834049
 GameObject:
   m_ObjectHideFlags: 0

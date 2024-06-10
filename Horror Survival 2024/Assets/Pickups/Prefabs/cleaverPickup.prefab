@@ -131,4 +131,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333bac8b4bb0638449e860e81cdf4664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chosenWeapon: 1
+  chooseWeapon: 1

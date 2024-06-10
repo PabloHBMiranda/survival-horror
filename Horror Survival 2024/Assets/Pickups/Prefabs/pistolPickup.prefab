@@ -405,6 +405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 363393118384925288}
   - component: {fileID: 7964416373782712016}
+  - component: {fileID: 7511771147677931397}
   m_Layer: 8
   m_Name: pistolPickup
   m_TagString: weapon
@@ -443,7 +444,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333bac8b4bb0638449e860e81cdf4664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chosenWeapon: 4
+  chooseWeapon: 4
+--- !u!65 &7511771147677931397
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6467197839519645734}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.2, z: 0.6}
+  m_Center: {x: 0, y: 0, z: 0.17}
 --- !u!1 &8371475340317061151
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5498943845187926900}
   - component: {fileID: 3671194444943988638}
   - component: {fileID: 6428378938057633064}
+  - component: {fileID: 205598229}
   m_Layer: 8
   m_Name: Cloths
   m_TagString: item
@@ -76,6 +77,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chooseItem: 3
+--- !u!65 &205598229
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5123967067960074702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.01, y: 0.68, z: 2.49}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8562094534574486981
 GameObject:
   m_ObjectHideFlags: 0
